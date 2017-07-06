@@ -196,7 +196,7 @@ public class Cookie implements Serializable {
 
             end = set_cookie.indexOf('=', beg);
             if (end == -1) {
-                if (set_cookie.substring(beg).trim().equals("secure")) {
+                if (set_cookie.substring(beg).trim().equalsIgnoreCase("secure")) {
                     end = set_cookie.length();
                     curr.secure = true;
                 } else {
